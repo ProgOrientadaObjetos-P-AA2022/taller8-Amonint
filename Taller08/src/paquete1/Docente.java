@@ -14,8 +14,52 @@ public class Docente {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    protected String nom;
+    protected String apellidos;
+    protected String id;
+    protected int edad;
+
+    public Docente() {
+
     }
-    
+
+    public void establecerNombres(String c) {
+        nom = c;
+    }
+
+    public String obtenerNombres() {
+        return nom;
+    }
+
+    public void establecerApellidos(String c) {
+        apellidos = c;
+    }
+
+    public String obtenerApellidos() {
+        return apellidos;
+    }
+
+    public void establecerId(String c) {
+        id = c;
+    }
+
+    public String obtenerId() {
+        return id;
+    }
+
+    public void establecerEdad(int c) {
+        edad = c;
+    }
+
+    public int obtenerEdad() {
+        return edad;
+    }
+
+    @Override
+    public String toString() {
+        String reporte = String.format("Nombre: %s\nApellido: %s\nIdentificacion: %s\nEdad: %d\n", obtenerNombres(),
+                 obtenerApellidos(), obtenerId(), obtenerEdad());
+        return reporte;
+    }
+
 }
